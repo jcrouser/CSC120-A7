@@ -64,7 +64,7 @@ Modify the `House` **constructor** to initialize `residents` to a `new ArrayList
 2. Write the following accessors to retrieve the indicated values:
 ```
 public boolean hasDiningRoom();
-public boolean nResidents();
+public int nResidents();
 ```
 
 ---
@@ -86,7 +86,7 @@ A `Library` is an altogether different kind of building:
 
 In this phase, your task is to expand on the stub contained in `Library.java`. A `Library` doesn't have any `residents` (nor do we have to worry about a dining room), but it does have a `collection` (of titles) which we'll store in another data structure called a `HashTable`:
 ```
-private HashTable<String, boolean> collection;
+private HashTable<String, Boolean> collection;
 ```
 `HashTable`s are a way to store `(key, value)` pairs in Java. We'll use store each book's title and author (concatenated together as one `String`, i.e. `"The Lorax by Dr. Seuss"`) as the `key`, and we'll use the corresponding boolean value to record whether or not the book is available (`true`) or currently checked out (`false`).
 
