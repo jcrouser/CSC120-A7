@@ -107,11 +107,15 @@ public void return(String title);
 _Hint: use the functions provided by the [`HashTable`](https://docs.oracle.com/javase/8/docs/api/java/util/Hashtable.html) class to make this much easier! Specifically, check out `put(...)`, `remove(...)`, and `replace(...)`._
 
 ---
-3. Finally, write a couple of methods to support browsing the collection:
+3. For good measure, we'll also write a couple of methods to support browsing the collection:
 ```
 public boolean containsTitle(String title); // returns true if the title appears as a key in the Libary's collection, false otherwise
 public boolean isAvailable(String title); // returns true if the title is currently available, false otherwise
 public void printCollection(); // prints out the entire collection in an easy-to-read way (including checkout status)
 ```
+_Hint: again, let HashTable's methods do some of the heavy lifting for you!_
 
+## Phase 3: The `Cafe` class
+Finally, my personal favorite type of building within walking distance of any college campus, the `Cafe`:
+<img src="https://cdn-icons-png.flaticon.com/512/1839/1839053.png" alt="Cafe icon created by Freepik - Flaticon" width="200"/>
 
