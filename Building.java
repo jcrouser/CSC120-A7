@@ -13,6 +13,10 @@ public class Building {
         this.nFloors = nFloors;
     }
 
+    public String getName() {
+        return this.name;
+    }
+
     public String getAddress() {
         return this.address;
     }
