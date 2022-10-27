@@ -102,7 +102,7 @@ public String removeTitle(String title); // return the title that we removed
 as well as to check a book out or return it (rather than adding or removing a book from the collection, these methods will simply modify the `value` associated with the given `key` - the `title`):
 ```
 public void checkOut(String title);
-public void return(String title);
+public void returnBook(String title);
 ```
 _Hint: use the functions provided by the [`HashTable`](https://docs.oracle.com/javase/8/docs/api/java/util/Hashtable.html) class to make this much easier! Specifically, check out `put(...)`, `remove(...)`, and `replace(...)`._
 
