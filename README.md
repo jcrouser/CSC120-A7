@@ -91,7 +91,7 @@ private HashTable<String, boolean> collection;
 `HashTable`s are a way to store `(key, value)` pairs in Java. We'll use store each book's title and author (concatenated together as one `String`, i.e. `"The Lorax by Dr. Seuss"`) as the `key`, and we'll use the corresponding boolean value to record whether or not the book is available (`true`) or currently checked out (`false`).
 
 ---
-1. Make the `Library` class `extend` the `Building` class, add a `private HashTable<String, boolean> collection` attribute, and initialize this to an empty `HashTable<String, boolean>` inside the `Library` constructor.
+1. Make the `Library` class `extend` the `Building` class, add a `private HashTable<String, boolean> collection` attribute, and initialize this to an empty `HashTable<String, boolean>` inside the `Library` constructor. Don't forget to `import java.util.HashTable`!
 
 ---
 2. Write methods to update the `HashTable` containing the `collection` every time we add/remove a title:
@@ -117,5 +117,35 @@ _Hint: again, let HashTable's methods do some of the heavy lifting for you!_
 
 ## Phase 3: The `Cafe` class
 Finally, my personal favorite type of building within walking distance of any college campus, the `Cafe`:
+
 <img src="https://cdn-icons-png.flaticon.com/512/1839/1839053.png" alt="Cafe icon created by Freepik - Flaticon" width="200"/>
 
+Unlike the `House` and the `Library`, the `Cafe` doesn't need to keep track of a large number of individual things. Instead, it needs to keep track of its inventory, which in this simplified world is just three ingredients and the cups to put them in:
+
+```
+private int nCoffeeOunces; // The number of ounces of coffee remaining in inventory
+private int nSugarPackets; // The number of sugar packets remaining in inventory
+private int nCreams; // The number of "splashes" of cream remaining in inventory
+private int nCups; // The number of cups remaining in inventory
+```
+
+---
+1. Make the `Cafe` class `extend` the `Building` class, add the attributes listed above, and modify the `Cafe` constructor to set the starting values of each of the stocked items (coffee, sugar, cream, and cups).
+
+---
+2. Write a method to decrease the remaining inventory when the `Cafe` sells a cup of coffee:
+```
+public void sellCoffee(int size, int nSugarPackets, int nCreams);
+```
+Each time this method is called, the inventory should decrease in each category according to the given parameters, e.g. calling `myCafe.sellCoffee(12, 2, 3);`
+should decrease the `myCafe` object's `nCoffeeOunces` by 12, `nSugarPackets` by 2, and `nCreams` by 3 (and of course, `nCups` by 1).
+
+---
+3. On of course, a `Cafe` can't sell what it doesn't have in stock, so let's also write a method to restock when necessary:
+```
+private void restock(int nCoffeeOunces, int nSugarPackets, int nCreams, int nCups); 
+```
+This method will be `private` (since we don't want some random person forcefully restocking the shelves!) - we'll call it from **inside** the `sellCoffee(...)` method, in the event that we don't have enough ingredients in stock to make the requested drink.
+
+## And that's it for this week!
+Submit your repo on Gradescope, and next week we'll build on these classes for an even more exciting `Inheritance` assignment!
