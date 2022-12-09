@@ -141,7 +141,7 @@ Each time this method is called, the inventory should decrease in each category 
 should decrease the `myCafe` object's `nCoffeeOunces` by 12, `nSugarPackets` by 2, and `nCreams` by 3 (and of course, `nCups` by 1).
 
 ---
-3. On of course, a `Cafe` can't sell what it doesn't have in stock, so let's also write a method to restock when necessary:
+3. And of course, a `Cafe` can't sell what it doesn't have in stock, so let's also write a method to restock when necessary:
 ```
 private void restock(int nCoffeeOunces, int nSugarPackets, int nCreams, int nCups); 
 ```
