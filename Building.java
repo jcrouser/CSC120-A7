@@ -1,8 +1,8 @@
 public class Building {
 
-    private String name = "<Name Unknown>";
-    private String address = "<Address Unknown>";
-    private int nFloors = 1;
+    protected String name = "<Name Unknown>";
+    protected String address = "<Address Unknown>";
+    protected int nFloors = 1;
 
     public Building(String name, String address, int nFloors) {
         if (name != null) { this.name = name; }
