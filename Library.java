@@ -16,7 +16,7 @@ public class Library extends Building{
           throw new RuntimeException ("This title is already in this collection");
         }
         else{
-          System.out.println("Adding book.........");
+          System.out.println("Adding " + title + ".........");
           this.collection.put(title, true);
           System.out.println("Book added!");
         }
