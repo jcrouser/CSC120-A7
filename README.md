@@ -10,9 +10,9 @@ We'll start with a simple class representing a generic `Building` (`Building.jav
 There is nothing special about this `Building`. It doesn't have any specific purpose, but it does have the minimal attributes you'd expect a building to have (pre-filled with some not-so-useful default values):
 
 ```
-private String name = "<Name Unknown>";
-private String address = "<Address Unknown>";
-private int nFloors = 1;
+protected String name = "<Name Unknown>";
+protected String address = "<Address Unknown>";
+protected int nFloors = 1;
 ```
 
 In addition, it can do a few basic things. It can tell you its name:
