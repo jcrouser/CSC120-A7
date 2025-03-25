@@ -1,4 +1,4 @@
-# CSC120-A6: Use What Your Parent (Class) Gave You
+# CSC120-A7: Use What Your Parent (Class) Gave You
 
 ## Outline
 In this assignment (Part I of a two-week assignment), we'll explore how to use [**Inheritance**](https://en.wikipedia.org/wiki/Inheritance_(object-oriented_programming)) to write _parsimonious_ programs. 
