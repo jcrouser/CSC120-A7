@@ -61,14 +61,17 @@ private boolean hasDiningRoom;
 Modify the `House` **constructor** to initialize `residents` to a `new ArrayList<Student>()`, as well as to set `hasDiningRoom` to indicate whether or not the house has a dining room. You'll have to pass this value in as a parameter to the constructor, and don't forget to `import java.util.ArrayList`!
 
 ---
-2. Write the following accessors to retrieve the indicated values:
+2. Make sure `House implements HouseRequirements`. Details for required methods are below. 
+
+---
+3. Write the following accessors to retrieve the indicated values:
 ```
 public boolean hasDiningRoom();
 public int nResidents();
 ```
 
 ---
-3. Write methods to update the `ArrayList` of `residents` every time someone moves in or out:
+4. Write methods to update the `ArrayList` of `residents` every time someone moves in or out:
 ```
 public void moveIn(Student s);
 public Student moveOut(Student s); // return the Student who moved out
@@ -91,10 +94,13 @@ private Hashtable<String, Boolean> collection;
 `Hashtable`s are a way to store `(key, value)` pairs in Java. We'll use store each book's title and author (concatenated together as one `String`, i.e. `"The Lorax by Dr. Seuss"`) as the `key`, and we'll use the corresponding boolean value to record whether or not the book is available (`true`) or currently checked out (`false`).
 
 ---
-1. Make the `Library` class `extend` the `Building` class, add a `private Hashtable<String, boolean> collection` attribute, and initialize this to an empty `Hashtable<String, boolean>` inside the `Library` constructor. Don't forget to `import java.util.Hashtable`!
+1. Make the `Library` class `extend` the `Building` class, add a `private Hashtable<String, Boolean> collection` attribute, and initialize this to an empty `Hashtable<String, Boolean>` inside the `Library` constructor. Don't forget to `import java.util.Hashtable`!
 
 ---
-2. Write methods to update the `Hashtable` containing the `collection` every time we add/remove a title:
+2. Make sure `Library implements LibraryRequirements`. Details for required methods are below. 
+
+---
+3. Write methods to update the `Hashtable` containing the `collection` every time we add/remove a title:
 ```
 public void addTitle(String title);
 public String removeTitle(String title); // return the title that we removed
@@ -107,7 +113,7 @@ public void returnBook(String title);
 _Hint: use the functions provided by the [`Hashtable`](https://docs.oracle.com/javase/8/docs/api/java/util/Hashtable.html) class to make this much easier! Specifically, check out `put(...)`, `remove(...)`, and `replace(...)`._
 
 ---
-3. For good measure, we'll also write a couple of methods to support browsing the collection:
+4. For good measure, we'll also write a couple of methods to support browsing the collection:
 ```
 public boolean containsTitle(String title); // returns true if the title appears as a key in the Libary's collection, false otherwise
 public boolean isAvailable(String title); // returns true if the title is currently available, false otherwise
@@ -133,7 +139,10 @@ private int nCups; // The number of cups remaining in inventory
 1. Make the `Cafe` class `extend` the `Building` class, add the attributes listed above, and modify the `Cafe` constructor to set the starting values of each of the stocked items (coffee, sugar, cream, and cups).
 
 ---
-2. Write a method to decrease the remaining inventory when the `Cafe` sells a cup of coffee:
+2. Make sure `Cafe implements CafeRequirements`. Details for required methods are below. 
+
+--- 
+3. Write a method to decrease the remaining inventory when the `Cafe` sells a cup of coffee:
 ```
 public void sellCoffee(int size, int nSugarPackets, int nCreams);
 ```
@@ -141,7 +150,7 @@ Each time this method is called, the inventory should decrease in each category 
 should decrease the `myCafe` object's `nCoffeeOunces` by 12, `nSugarPackets` by 2, and `nCreams` by 3 (and of course, `nCups` by 1).
 
 ---
-3. And of course, a `Cafe` can't sell what it doesn't have in stock, so let's also write a method to restock when necessary:
+4. And of course, a `Cafe` can't sell what it doesn't have in stock, so let's also write a method to restock when necessary:
 ```
 private void restock(int nCoffeeOunces, int nSugarPackets, int nCreams, int nCups); 
 ```

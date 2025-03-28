@@ -10,7 +10,7 @@ Listed below are various aspects of the assignment.  When you turn in your work,
 
 ## Assignment Points:
 
-_____ 1 pt: The `House`, `Library`, and `Cafe` classes all `extend` the `Building` class.
+_____ 1 pt: The `House`, `Library`, and `Cafe` classes all `extend` the `Building` class and `implement` requirements.
 
 ### Level 1: `House.java` (3 pts)
 
